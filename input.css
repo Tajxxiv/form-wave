@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #14453D inset;
+    box-shadow: 0 0 0px 1000px #14453D inset;
+    transition: background-color 5000s ease-in-out 0s;
+    color: white;
+}
+
+body {
+    @apply
+
+    scroll-smooth
+    p-0
+    m-0
+    bg-[#3D7068]
+    w-[100vw]
+    h-[100vh]
+    overflow-hidden
+}
+
+.compound {
+    @apply
+    
+    flex
+    flex-col
+    mx-auto
+    items-center
+    justify-center
+    text-center
+    text-white
+    rounded-lg
+    font-inter
+    p-10
+    mt-[80px]
+    w-[400px]
+    bg-[#14453D]
+}
+
+.compound h1 {
+    @apply
+
+   text-2xl
+   font-semibold
+}
+
+.btn {
+    @apply 
+    mb-10 
+    mt-4
+    border 
+    bg-[#43C59E] 
+    text-[#000] 
+    h-14 
+    w-[300px] 
+    rounded-lg 
+    focus:scale-95 
+    active:scale-95
+}
+
+a {
+    @apply
+
+  text-[#3DFAFF]
+}
+
+.form-container {
+    @apply
+
+    relative
+    w-[300px]
+    my-[40px]
+}
+
+.form-container input {
+    @apply
+
+
+    w-full
+    block
+    bg-transparent
+    border-b-2
+    py-[15px]
+    outline-none
+    text-[18px]
+}
+
+.form-container input:focus,
+.form-container input:valid {
+    @apply
+
+    border-b-[#43C59E]
+    outline-0
+}
+
+.form-container label {
+    @apply
+
+    absolute
+    top-[16px]
+    left-0
+    pointer-events-none
+}
+
+.form-container label span {
+    @apply
+
+    inline-block
+    ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]
+    delay-700
+    duration-700
+    text-[18px]
+    min-w-[5px]
+}
+
+.form-container input:focus+label span,
+.form-container input:valid+label span {
+    @apply
+
+    text-[#43C59E]
+    -translate-y-[36px]
+}
+
